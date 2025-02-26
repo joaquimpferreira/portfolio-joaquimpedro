@@ -3,5 +3,5 @@ export const Button = ({ children }) => {
 }
 
 export const ButtonSecond = ({children}) => {
-    return <button className="flex items-center justify-center p-2 rounded-2xl bg- outline outline-white text-white gap-2 text-lg leading-5 hover:bg-button cursor-pointer hover:font-semibold">{children} <img src="../../src/assets/seta-button2.svg"></img> </button>
+    return <button className="active:bg-white/50 flex items-center justify-center p-2 rounded-2xl bg- outline outline-white text-white gap-2 text-lg leading-5 hover:bg-button cursor-pointer hover:font-semibold ml-10 lg:ml-0">{children} <img src="../../src/assets/seta-button2.svg"></img> </button>
 }

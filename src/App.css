@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@layer base {
+    body {
+      @apply bg-bg-800;
+    }
+  }
+
 
 @theme {
     --font-inter: Inter, sans-serif;
@@ -23,4 +29,20 @@
     --shadow-3x1: 0 7px 4px rgba(0, 0, 0, 0.15); 
     --color-button: rgba(217, 217, 217, 0.24);
     --breakpoint-i: initial;
+
+    @keyframes degrade-animado {
+      0%{
+        background-position-x: 0%;
+      }
+      100% {
+        background-position-x: 100%;
+      }
+  
+    }
+}
+
+@layer utilities {
+  .animate-degrade {
+    animation: degrade-animado 2s infinite alternate;
+  }
 }

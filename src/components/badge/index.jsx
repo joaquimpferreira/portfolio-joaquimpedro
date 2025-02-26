@@ -1,10 +1,10 @@
 export const Badge = ({ children }) => {
-    return <div className=" w-[266px] flex flex-col justify-center items-center relative" >{children}</div>
+    return <div className=" w-[266px] hover:w-[270px] flex flex-col justify-center items-center relative" >{children}</div>
 
 }
 
 export const BadgeSecond = ({ children }) => {
-    return <div className=" h-[38px] flex justify-center items-center bg-gray-400 rounded-lg mr-5 p-2 pr-[10px]" >{children}</div>
+    return <div className=" h-[38px] flex justify-center items-center bg-gray-400 rounded-lg lg:mr-5 p-2 pr-[10px]" >{children}</div>
 
 }
 

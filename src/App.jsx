@@ -25,7 +25,12 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import { IoLogoFigma } from "react-icons/io5";
 import SendEmail from "./components/emailjs/index.jsx"
+import { IoPerson } from "react-icons/io5";
 import React, { useRef } from "react";
+import Spline from '@splinetool/react-spline';
+import { LuPencil } from "react-icons/lu";
+import { PiSuitcaseSimpleBold } from "react-icons/pi";
+import { MdMailOutline } from "react-icons/md";
 
 
 
@@ -48,13 +53,13 @@ function App() {
 
 
   return (
-    <div className='bg-bg-800 w-100%'>
-      <div className='bg-[url(./src/assets/degrade.svg)] bg-no-repeat'>
-
+    <div >
+      <Spline scene="https://prod.spline.design/ZhTG6aAJofIJ5CKm/scene.splinecode" className='absolute z-1'/>
+      <div className='relative z-2'>
         <header className='flex justify-center'>
           <Navbar>
             <section>
-              <ul className='list-none flex flex-row items-center justify-start gap-10'>
+              <ul className='list-none hidden lg:flex flex-row items-center justify-start gap-10 '>
                 
                 <li><Link to="home" smooth={true} duration={500}><img className='w-[51px] h-[35px] hover:w-[53px] hover:h-[37px]' src="./src/assets/logo.svg" alt="logo" /></Link></li>
                 <li><Link to="sobre-mim" smooth={true} duration={500} offset={-60}><Paragraph type='p10'>Sobre mim</Paragraph></Link></li>
@@ -63,38 +68,46 @@ function App() {
                 <li><Link to="contato" smooth={true} duration={500} offset={-60}><Paragraph type='p10'>Contato</Paragraph></Link></li>
               </ul>
             </section>
-            <section>
-              <ul className='list-none flex flex-row items-center justify-end gap-6'>
+            <section className='lg:ml-[45%]'>
+              <ul className='list-none hidden lg:flex flex-row items-center justify-end gap-6'>
                 <li><a href='mailto:joaquimjpfc@gmail.com?'> <MdEmail className='w-[18px] h[18px] hover:w-5 hover:h-5' /> </a></li>
                 <li> <a href='https://www.linkedin.com/in/joaquim-pedro-ferreira/' target='blank'><BsLinkedin className='hover: w-[18px] hover:h-[18px]'/> </a> </li>
                 <li><a href='https://github.com/joaquimpferreira' target='blank'><RxGithubLogo className='hover: w-[18px] hover:h-[18px]'/> </a> </li>
               </ul>
             </section>
+
+            <section>
+              <ul className='list-none flex lg:hidden flex-row items-center justify-start gap-10 '>
+                
+                <li><Link to="home" smooth={true} duration={500}><IoPerson className='w-5 h-5' /></Link></li>
+                <li><Link to="skills" smooth={true} duration={500} offset={-60}><LuPencil className='w-5 h-5' /></Link></li>
+                <li><Link to="projetos" smooth={true} duration={500} offset={-60}><PiSuitcaseSimpleBold className='w-5 h-5' /></Link></li>
+                <li><Link to="contato" smooth={true} duration={500} offset={-60}><MdMailOutline className='w-5 h-5' /></Link></li>
+              </ul>
+            </section>
+
           </Navbar>
         </header>
 
         <main>
-          <article className='flex flex-row items-center sm:justify-between i:justify-center mb-[165px]' id='home'>
-            <section className='ml-[207px] mt-48'>
-            <Heading>Transformando <span className='bg-gradient-to-r from-violet-900 to-yellow-400 bg-clip-text text-transparent'>ideias</span> em experiências digitais.</Heading>
-            <div className='mt-6'><Button>Tenho uma ideia</Button></div>
+          
+          <article className='flex flex-col md:flex-row items-center justify-center mb-[90%] mt-[80%] lg:mb-[16%] lg:mt-[14%]' id='home'>
+            <section className='text-center md:text-left'>
+            <Heading>Transformando ideias em experiências digitais.</Heading>
             </section>
-
-            <aside>
-              <img className=' sm:w-full sm:h-[700px]' src="./src/assets/logo-ampliada.svg" alt="logo" />
-            </aside>
             </article>
+            
 
-          <article className='mb-[190px]' id='sobre-mim'>
-            <section className='ml-[243px] mb-[120px]'>
+          <article className='lg:mb-[190px] mb-[100px] p-4 lg:p-0' id='sobre-mim'>
+            <section className='lg:ml-[243px] lg:mb-[120px] mb-[100px]'>
               <Heading type='h2'>Um pouco sobre mim</Heading>
               <Paragraph>Quem eu sou e o que eu faço.</Paragraph>
             </section>
-            <div className='flex justify-evenly items-center'>
-              <section className='w-1/3'>
+            <div className='flex lg:justify-evenly items-center flex-col lg:flex-row'>
+              <section className='lg:w-1/3 w-2/3'>
                 <div className='mb-8'>
                 <Paragraph type='p2'>QUEM SOU EU</Paragraph>
-                <Paragraph type='p3'>Sou o <span className='font-semibold text-white'>Joaquim Pedro</span>, um desenvolvedor front-end e designer UI/UX. Tenho 18 anos e estou cursando o primeiro periodo de Sistemas de Informacao na Universidade Federal de Uberlandia, no Brasil 🇧🇷</Paragraph>
+                <Paragraph type='p3'>Sou o <span className='font-semibold text-white'>Joaquim Pedro</span>, um desenvolvedor front-end e designer UI/UX. Tenho 18 anos e estou cursando o primeiro periodo de Sistemas de Informacao na Universidade Federal de Uberlandia, no Brasil.</Paragraph>
                 </div>
                 <div className='mb-8' >
                 <Paragraph type='p2'>O QUE EU FIZ</Paragraph>
@@ -113,30 +126,30 @@ function App() {
               </section>
               <aside>
                 <img src="" alt="foto-perfil" />
-                <Button>Contato</Button>
+                <Link to="contato" smooth={true} duration={500} offset={-60}><Button >Contato</Button></Link>
               </aside>
             </div>
           </article>
 
-          <article className='mb-[190px]' id='skills'>
+          <article className='lg:mb-[190px] mb-[100px]' id='skills'>
 
-            <section className='ml-[243px] mb-[120px] w-1/3'>
+            <section className='lg:ml-[243px] lg:mb-[120px] mb-[60px] lg:w-1/3 p-4 lg:p-0'>
               <Heading type='h2'>Skills</Heading>
               <Paragraph>As habilidades técnicas, ferramentas de desenvolvimento e habilidades interpessoais.</Paragraph>
             </section>
 
-            <section className='mb-[80px]'>
+            <section className='mb-[80px] p-4 lg:p-0'>
               <div className='flex justify-center'>
                 <Heading type='h3'>Tecnologias</Heading>
               </div>
 
-              <div className='flex gap-4 mb-4 mt-8 justify-center'>
+              <div className='flex lg:flex-row flex-col gap-4 mb-4 mt-8 justify-center items-center'>
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierA.png" alt="tier-a" className='w-27 h-27 relative left-10 bottom-10'/>
+                    <img src="./src/assets/tierA.png" alt="tier-a" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
-                  <div className='h-[60%] w-full flex justify-center items-center text-yellow-300'> <IoLogoJavascript className='w-[60%] h-[60%]'/></div>
+                  <div className='h-[60%] w-full flex justify-center items-center text-yellow-300'> <IoLogoJavascript className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
 
                   <div className='h-[20%] w-full flex items-center justify-between'>
                     <Paragraph type = 'p9'>JavaScript</Paragraph>
@@ -146,10 +159,10 @@ function App() {
 
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierB.png" alt="tier-b" className='w-27 h-27 relative left-10 bottom-10'/>
+                    <img src="./src/assets/tierB.png" alt="tier-b" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
-                  <div className='h-[60%] w-full flex justify-center items-center text-cyan-400'> <FaReact className='w-[60%] h-[60%]'/></div>
+                  <div className='h-[60%] w-full flex justify-center items-center text-cyan-400'> <FaReact className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
 
                   <div className='h-[20%] w-full flex items-center justify-between'>
                     <Paragraph type = 'p9'>ReactJS</Paragraph>
@@ -159,10 +172,10 @@ function App() {
 
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierB.png" alt="tier-b" className='w-27 h-27 relative left-10 bottom-10'/>
+                    <img src="./src/assets/tierB.png" alt="tier-b" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
-                  <div className='h-[60%] w-full flex justify-center items-center text-green-600'> <FaNodeJs className='w-[60%] h-[60%]'/></div>
+                  <div className='h-[60%] w-full flex justify-center items-center text-green-600'> <FaNodeJs className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
 
                   <div className='h-[20%] w-full flex items-center justify-between'>
                     <Paragraph type = 'p9'>NodeJS</Paragraph>
@@ -172,13 +185,13 @@ function App() {
 
               </div>
 
-              <div className='flex gap-4 mb-4 justify-center'>
+              <div className='flex gap-4 mb-4 justify-center lg:flex-row flex-col items-center'>
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierB.png" alt="tier-b" className='w-27 h-27 relative left-10 bottom-10'/>
+                    <img src="./src/assets/tierB.png" alt="tier-b" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
-                  <div className='h-[60%] w-full flex justify-center items-center text-cyan-500'> <RiTailwindCssFill className='w-[60%] h-[60%]'/></div>
+                  <div className='h-[60%] w-full flex justify-center items-center text-cyan-500'> <RiTailwindCssFill className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
 
                   <div className='h-[20%] w-full flex items-center justify-between'>
                     <Paragraph type = 'p9'>TailwindCSS</Paragraph>
@@ -188,10 +201,10 @@ function App() {
 
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierS.png" alt="tier-s" className='w-27 h-27 relative left-10 bottom-10'/>
+                    <img src="./src/assets/tierS.png" alt="tier-s" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
-                  <div className='h-[60%] w-full flex justify-center items-center text-blue-500'> <FaCss3Alt className='w-[60%] h-[60%]'/></div>
+                  <div className='h-[60%] w-full flex justify-center items-center text-blue-500'> <FaCss3Alt className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
 
                   <div className='h-[20%] w-full flex items-center justify-between'>
                     <Paragraph type = 'p9'>CSS3</Paragraph>
@@ -201,10 +214,10 @@ function App() {
 
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierS.png" alt="tier-s" className='w-27 h-27 relative left-10 bottom-10'/>
+                    <img src="./src/assets/tierS.png" alt="tier-s" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
-                  <div className='h-[60%] w-full flex justify-center items-center text-orange-500'> <FaHtml5 className='w-[60%] h-[60%]'/></div>
+                  <div className='h-[60%] w-full flex justify-center items-center text-orange-500'> <FaHtml5 className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
 
                   <div className='h-[20%] w-full flex items-center justify-between'>
                     <Paragraph type = 'p9'>HTML5</Paragraph>
@@ -215,18 +228,18 @@ function App() {
               </div>
             </section>
 
-            <section className='mb-[90px]'>
+            <section className='mb-[90px] p-4 lg:p-0'>
               <div className='flex justify-center'>
               <Heading type='h3'>Ferramentas</Heading>
               </div>
-              <div className='flex gap-4 mt-8 justify-center'>
+              <div className='flex lg:flex-row flex-col gap-4 mt-8 justify-center items-center'>
 
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierA.png" alt="tier-a" className='w-27 h-27 relative left-10 bottom-10'/>
+                    <img src="./src/assets/tierA.png" alt="tier-a" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                     </div>
 
-                    <div className='h-[60%] w-full flex justify-center items-center text-blue-400'> <VscVscode className='w-[60%] h-[60%]'/></div>
+                    <div className='h-[60%] w-full flex justify-center items-center text-blue-400'> <VscVscode className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
 
                     <div className='h-[20%] w-full flex items-center justify-between'>
                     <Paragraph type = 'p9'>VScode</Paragraph>
@@ -236,10 +249,10 @@ function App() {
 
               <Emblem>
               <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierS.png" alt="tier-s" className='w-27 h-27 relative left-10 bottom-10'/>
+                    <img src="./src/assets/tierS.png" alt="tier-s" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
-                  <div className='h-[60%] w-full flex justify-center items-center text-white'> <IoLogoFigma className='w-[60%] h-[60%]'/></div>
+                  <div className='h-[60%] w-full flex justify-center items-center text-white'> <IoLogoFigma className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
 
                   <div className='h-[20%] w-full flex items-center justify-between'>
                     <Paragraph type = 'p9'>Figma</Paragraph>
@@ -249,10 +262,10 @@ function App() {
 
               <Emblem>
                 <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierA.png" alt="tier-a" className='w-27 h-27 relative left-10 bottom-10'/>
+                    <img src="./src/assets/tierA.png" alt="tier-a" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                     </div>
 
-                    <div className='h-[60%] w-full flex justify-center items-center text-gray-200'> <RxGithubLogo className='w-[60%] h-[60%]'/></div>
+                    <div className='h-[60%] w-full flex justify-center items-center text-gray-200'> <RxGithubLogo className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
 
                     <div className='h-[20%] w-full flex items-center justify-between'>
                     <Paragraph type = 'p9'>GitHub</Paragraph>
@@ -267,7 +280,7 @@ function App() {
               <div className='flex justify-center mb-10 text-center'>
               <Heading type='h3'>Soft Skills</Heading>
               </div>
-              <div className='flex justify-between'>
+              <div className='flex lg:justify-between lg:flex-row flex-col items-center '>
               <Badge></Badge>
 
               <Badge>
@@ -307,20 +320,20 @@ function App() {
 
           </article>
 
-          <article className='mb-[190px]' id='projetos'>
-            <section className='ml-[243px] mb-[120px]'>
+          <article className='lg:mb-[190px] mb-[100px]' id='projetos'>
+            <section className='lg:ml-[243px] lg:mb-[120px] mb-[60px] p-4 lg:p-0'>
               <Heading type='h2'>Projetos</Heading>
               <Paragraph>Projetos e ideias desenvolvidos por mim.</Paragraph>
           </section>
 
           <section className='flex flex-col items-center gap-4'>
             <Card>
-              <div className='pl-14 pt-22 pb-18 pr-9 w-[45%]'>
+              <div className='lg:pl-14 lg:pt-22 lg:pb-18 lg:pr-9 pt-14 pb-13 lg:w-[45%]'>
                 <Heading type='h4'>Convert Money</Heading>
-                <div className='mt-4 mb-13'>
+                <div className='mt-4 mb-13 ml-10 mr-10 lg:mr-0 lg:ml-0'>
                   <Paragraph type='p4'>Convert Money é aplicação que permite converter valores monetários entre diferentes moedasm utilizando HTML, CSS e JavaScript para implementar a lógica de conversão. Conceitos como manipulação do DOM, eventos e cálculos matemáticos são desenvolvidos.</Paragraph>
                 </div>
-                <div className='flex mb-33'>
+                <div className='flex lg:mb-33 mb-15 justify-evenly'>
                   <BadgeSecond>
                     <IoLogoJavascript className='h-[23px] w-[23px] text-yellow-400 m-1'/>
                     <Paragraph type ='p5'>JavaScript</Paragraph>
@@ -336,22 +349,20 @@ function App() {
                     <Paragraph type ='p5'>HTML5</Paragraph>
                   </BadgeSecond>
                 </div>
-
-                <ButtonSecond>Acessar projeto</ButtonSecond>
-
+                <a href="https://github.com/joaquimpferreira/convert-money" target='blank'><ButtonSecond>Acessar projeto</ButtonSecond></a>
               </div>
         
-              <img className='' src="./src/assets/screen-convertmoney.png" alt="screen-convertmoney" />
+              <img className='hidden lg:block' src="./src/assets/screen-convertmoney.png" alt="screen-convertmoney" />
             </Card>
 
             <Card type='card2'>
 
-            <div className='pl-14 pt-22 pb-18 pr-9 w-[45%]'>
+            <div className='lg:pl-14 lg:pt-22 lg:pb-18 lg:pr-9 lg:w-[45%] pt-14 pb-13'>
                 <Heading type='h4'>Node Study</Heading>
-                <div className='mt-4 mb-13'>
+                <div className='mt-4 mb-13 ml-10 mr-10 lg:mr-0 lg:ml-0'>
                   <Paragraph type='p4'>Node Study é um projeto com uso de JavaScript para o desenvolvimento do servidor e a gestão de dependências através do npm. Trabalhando conceitos fundamentais do Node.js, como módulos, gerenciamento de pacotes e execução de scripts.</Paragraph>
                 </div>
-                <div className='flex mb-33'>
+                <div className='flex lg:mb-33 mb-15 justify-evenly'>
                   <BadgeSecond>
                     <IoLogoJavascript className='h-[23px] w-[23px] text-yellow-400 m-1'/>
                     <Paragraph type ='p5'>JavaScript</Paragraph>
@@ -363,22 +374,20 @@ function App() {
                   </BadgeSecond>
 
                 </div>
-
-                <ButtonSecond>Acessar projeto</ButtonSecond>
-
+                <a href="https://github.com/joaquimpferreira/Node-Study-Project" target='blank'><ButtonSecond>Acessar projeto</ButtonSecond></a>
               </div>
         
-              <img className='' src="./src/assets/screen-nodestudy.png" alt="screen-convertmoney" />
+              <img className='hidden lg:block' src="./src/assets/screen-nodestudy.png" alt="screen-convertmoney" />
 
             </Card>
 
             <Card type='card3'>
-            <div className='pl-14 pt-22 pb-18 pr-9 w-[45%]'>
+            <div className='lg:pl-14 lg"pt-22 lg"pb-18 lg:pr-9 lg:w-[45%] pt-14 pb-13'>
                 <Heading type='h4'>Covary Location</Heading>
-                <div className='mt-4 mb-13'>
+                <div className='mt-4 mb-13 ml-10 mr-10 lg:mr-0 lg:ml-0'>
                   <Paragraph type='p6'>O projeto Wide Coverage Location é um estudo de responsividade e CSS, seu foco principal é a prática de técnicas de responsividade e estilização utilizando CSS e HTML.</Paragraph>
                 </div>
-                <div className='flex mb-33'>
+                <div className='flex lg:mb-33 mb-15 justify-evenly'>
                   <BadgeSecond>
                   <FaCss3Alt className='w-[25px] h-[25px] text-blue-700 m-1'/>
                     <Paragraph type ='p5'>CSS3</Paragraph>
@@ -390,11 +399,11 @@ function App() {
                   </BadgeSecond>
                 </div>
 
-                <ButtonSecond>Acessar projeto</ButtonSecond>
+                <a href="https://github.com/joaquimpferreira/Wide-Coverage-Location" target='blank'><ButtonSecond>Acessar projeto</ButtonSecond></a>
 
               </div>
         
-              <img className='' src="./src/assets/screen-covarylocation.svg" alt="screen-convertmoney" />
+              <img className='hidden lg:block' src="./src/assets/screen-covarylocation.svg" alt="screen-convertmoney" />
             </Card>
 
             <Card type='card4'>
@@ -403,13 +412,13 @@ function App() {
                   <Heading type = 'h4'>SEU PROJETO VAI AQUI</Heading>
                   <Paragraph type = 'p7'>Vamos transformar sua ideia em realidade visual</Paragraph>
                 </div>
-              <Button>Entrar em contato</Button>
+              <Link to="contato" smooth={true} duration={500} offset={-60}><Button>Entrar em contato</Button></Link>
             </Card>
           </section>
           </article>
 
-          <article className='mb-[75px]' id='contato'>
-            <section className='ml-[243px] mb-[120px]'>
+          <article className='lg:mb-[75px] mb-[0px]' id='contato'>
+            <section className='lg:ml-[243px] lg:mb-[120px] mb-[60px] p-4 lg:p-0'>
             <Heading type='h2'>Entrar em contato</Heading>
             <Paragraph>Vamos construir algo incrivel!</Paragraph>
             </section>
@@ -471,9 +480,9 @@ function App() {
           </article>
         </main>
 
-        <footer className='bg-[url(./src/assets/degrade-invert.svg)] bg-no-repeat pb-19'>
+        <footer className='pb-19 px-10 lg:px-0'>
           <img src="./src/assets/linha.svg" alt="linha" className='w-full mb-34'/>
-          <div className='flex justify-around'>
+          <div className='flex lg:justify-around lg:flex-row flex-col-reverse gap-12 lg:gap-0'>
             <div>
               <img src="./src/assets/logo.svg" alt="logo" className='w-[109px] h-[75px]'/>
               <p className="font-inter text-text-700 opacity-50 text-[14px] leading-4 font-normal mt-2">© 2025 Joaquim Pedro. All Rights Reserved.</p>
