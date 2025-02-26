@@ -2,6 +2,7 @@ import './App.css'
 import { Link } from 'react-scroll';
 import { Button } from './components/button/index.jsx'
 import { ButtonSecond } from './components/button/index.jsx'
+import { ButtonPerfil } from './components/button/index.jsx'
 import { Emblem } from './components/emblem/index.jsx'
 import { Badge } from './components/badge/index.jsx'
 import { BadgeSecond } from './components/badge/index.jsx'
@@ -121,17 +122,17 @@ function App() {
                 </div>
                 <div>
                 <Paragraph type='p3'>Vamos construir algo incrivel,</Paragraph>
-                <img src="" alt="assinatura" />
+                <img src="./src/assets/assinatura.svg" alt="assinatura" />
               </div>
               </section>
-              <aside>
-                <img src="" alt="foto-perfil" />
-                <Link to="contato" smooth={true} duration={500} offset={-60}><Button >Contato</Button></Link>
+              <aside className='mt-[15%] lg:mt-0'>
+                <img src="./src/assets/foto-perfil.png" alt="foto-perfil" />
+                <Link to="contato" smooth={true} duration={500} offset={-60}><ButtonPerfil>Contato</ButtonPerfil></Link>
               </aside>
             </div>
           </article>
 
-          <article className='lg:mb-[190px] mb-[100px]' id='skills'>
+          <article className='lg:mb-[190px] mb-[40px]' id='skills'>
 
             <section className='lg:ml-[243px] lg:mb-[120px] mb-[60px] lg:w-1/3 p-4 lg:p-0'>
               <Heading type='h2'>Skills</Heading>
