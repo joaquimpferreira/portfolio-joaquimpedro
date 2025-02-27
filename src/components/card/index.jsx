@@ -1,3 +1,5 @@
+{/* Componente - Card */}
+
 export const Card = ({ children, type = 'card1' }) => {
     if (type === 'card1'){
         return <div className="bg-gradient-to-r from-gray-600 to-gray-200  hover:bg-[length:200%_100%] animate-degrade outline outline-gray-300  w-[90%] lg:h-[565px] rounded-4xl flex lg:justify-between lg:w-[65%]">{children}</div>

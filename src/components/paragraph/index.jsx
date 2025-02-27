@@ -1,3 +1,5 @@
+{/* Componente - Paragraph */}
+
 export const Paragraph = ({ children, type = 'p1' }) => {
     if (type === 'p1'){
         return <p className="font-inter text-text-700 opacity-50 lg:text-2xl lg:leading-7  text-[16px] leading-5 font-normal mt-2">{children}</p>

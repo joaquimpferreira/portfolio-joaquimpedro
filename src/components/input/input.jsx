@@ -1,3 +1,5 @@
+{/* Componente - Input */}
+
 export const Input = ({ children, type = 'inputemail' }) => {
     if (type === 'inputemail'){
         return <input type="text" placeholder="you@example.com" className="focus:outline-none font-inter text-white/70 text-[16px] leading-5 font-normal" name="email" required >{children}</input>

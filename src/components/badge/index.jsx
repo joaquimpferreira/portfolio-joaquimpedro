@@ -1,3 +1,6 @@
+{/* Componente - Badge */}
+
+
 export const Badge = ({ children }) => {
     return <div className=" w-[266px] hover:w-[270px] flex flex-col justify-center items-center relative" >{children}</div>
 

@@ -1,3 +1,5 @@
+{/* Componente - Integracao EmailJs */}
+
 import emailjs from '@emailjs/browser';
 
 const SendEmail = (formElement) => {

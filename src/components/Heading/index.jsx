@@ -1,3 +1,5 @@
+{/* Componente - Heading */}
+
 export const Heading = ({ children, type = 'h1' }) => {
     if (type === 'h1'){
         return <h1 className="font-inter text-5xl leading-11 w-[340px] h-[240px] lg:text-8xl lg:leading-29 text-white font-bold bg-none lg:w-[736px] lg:h-[464px] text-center">{children}</h1>
