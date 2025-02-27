@@ -143,7 +143,7 @@ function App() {
               </section>
               <aside className='mt-[15%] lg:mt-0'>
                 <img src={perfil} alt="foto-perfil" />
-                <Link to="contato" smooth={true} duration={500} offset={-60}><ButtonPerfil>Contato</ButtonPerfil></Link>
+                <Link to="contato" smooth={true} duration={500} offset={-60}><ButtonPerfil imgSrc={seta1}>Contato</ButtonPerfil></Link>
               </aside>
             </div>
           </article>
@@ -366,7 +366,7 @@ function App() {
                     <Paragraph type ='p5'>HTML5</Paragraph>
                   </BadgeSecond>
                 </div>
-                <a href="https://github.com/joaquimpferreira/convert-money" target='blank'><ButtonSecond>Acessar projeto</ButtonSecond></a>
+                <a href="https://github.com/joaquimpferreira/convert-money" target='blank'><ButtonSecond imgSrc={seta2}>Acessar projeto</ButtonSecond></a>
               </div>
         
               <img className='hidden lg:block' src={money} alt="screen-convertmoney" />
@@ -391,7 +391,7 @@ function App() {
                   </BadgeSecond>
 
                 </div>
-                <a href="https://github.com/joaquimpferreira/Node-Study-Project" target='blank'><ButtonSecond>Acessar projeto</ButtonSecond></a>
+                <a href="https://github.com/joaquimpferreira/Node-Study-Project" target='blank'><ButtonSecond imgSrc={seta2}>Acessar projeto</ButtonSecond></a>
               </div>
         
               <img className='hidden lg:block' src={node} alt="screen-nodestudy" />
@@ -416,7 +416,7 @@ function App() {
                   </BadgeSecond>
                 </div>
 
-                <a href="https://github.com/joaquimpferreira/Wide-Coverage-Location" target='blank'><ButtonSecond>Acessar projeto</ButtonSecond></a>
+                <a href="https://github.com/joaquimpferreira/Wide-Coverage-Location" target='blank'><ButtonSecond imgSrc={seta2}>Acessar projeto</ButtonSecond></a>
 
               </div>
         
@@ -429,7 +429,7 @@ function App() {
                   <Heading type = 'h4'>SEU PROJETO VAI AQUI</Heading>
                   <Paragraph type = 'p7'>Vamos transformar sua ideia em realidade visual</Paragraph>
                 </div>
-              <Link to="contato" smooth={true} duration={500} offset={-60}><Button>Entrar em contato</Button></Link>
+              <Link to="contato" smooth={true} duration={500} offset={-60}><Button imgSrc={seta1}>Entrar em contato</Button></Link>
             </Card>
           </section>
           </article>
@@ -474,7 +474,7 @@ function App() {
                 </div>
 
                 <div className='flex justify-end'>
-                  <Button type="submit">Enviar</Button>
+                  <Button type="submit" imgSrc={seta1}>Enviar</Button>
                 </div>
 
               </form>

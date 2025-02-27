@@ -15,5 +15,3 @@ export default defineConfig({
   },
 })
 
-console.log("Caminho da imagem perfil:", perfil);
-console.log("Caminho da imagem badgeP:", badgeP);
