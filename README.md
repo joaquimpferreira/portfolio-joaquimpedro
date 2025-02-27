@@ -7,7 +7,9 @@ Este é o meu **portfólio pessoal**, desenvolvido com **React** e **Tailwind CS
 
 ##
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/user-attachments/assets/74c35d8e-cc1f-41d1-b04a-2b6cf555aff6)
+
+![App Screenshot](https://github.com/user-attachments/assets/5f318bc0-5b56-4a8c-ac78-e40b4f43b9b9)
 
 
 ## Processo de desenvolvimento: 
