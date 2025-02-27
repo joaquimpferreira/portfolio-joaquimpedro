@@ -1,3 +1,5 @@
+
+
 export const Button = ({ children }) => {
     return <button className="flex items-center justify-center p-4 rounded-lg bg-gradient-to-b from-gray-500 to-gray-700 text-white gap-2 font-inter text-lg leading-5 hover:shadown-3x1 hover:inset-shadow-md cursor-pointer"> <img src="../../src/assets/seta-button1.svg"></img>{children}</button>
 }

@@ -32,6 +32,22 @@ import Spline from '@splinetool/react-spline';
 import { LuPencil } from "react-icons/lu";
 import { PiSuitcaseSimpleBold } from "react-icons/pi";
 import { MdMailOutline } from "react-icons/md";
+import assinatura from './assets/assinatura.svg';
+import perfil from './assets/foto-perfil.png';
+import tierA from './assets/tierA.png';
+import tierB from './assets/tierB.png';
+import tierS from './assets/tierS.png';
+import badgeE from './assets/badge-equipe.png';
+import badgeP from './assets/badge-pensamento.png';
+import badgeA from './assets/badge-adpt.png';
+import money from './assets/screen-convertmoney.png';
+import covary from './assets/screen-covarylocation.svg';
+import node from './assets/screen-nodestudy.png';
+import stars from './assets/stars-symbol.svg';
+import linha from './assets/linha.svg';
+import logo from './assets/logo.svg';
+import seta1 from './assets/seta-button1.svg';
+import seta2 from './assets/seta-button2.svg';
 
 
 
@@ -62,7 +78,7 @@ function App() {
             <section>
               <ul className='list-none hidden lg:flex flex-row items-center justify-start gap-10 '>
                 
-                <li><Link to="home" smooth={true} duration={500}><img className='w-[51px] h-[35px] hover:w-[53px] hover:h-[37px]' src="./src/assets/logo.svg" alt="logo" /></Link></li>
+                <li><Link to="home" smooth={true} duration={500}><img className='w-[51px] h-[35px] hover:w-[53px] hover:h-[37px]' src={logo} alt="logo" /></Link></li>
                 <li><Link to="sobre-mim" smooth={true} duration={500} offset={-60}><Paragraph type='p10'>Sobre mim</Paragraph></Link></li>
                 <li><Link to="skills" smooth={true} duration={500} offset={-60}><Paragraph type='p10'>Skills</Paragraph></Link></li>
                 <li><Link to="projetos" smooth={true} duration={500} offset={-60}><Paragraph type='p10'>Projetos</Paragraph></Link></li>
@@ -122,11 +138,11 @@ function App() {
                 </div>
                 <div>
                 <Paragraph type='p3'>Vamos construir algo incrivel,</Paragraph>
-                <img src="./src/assets/assinatura.svg" alt="assinatura" />
+                <img src={assinatura} alt="assinatura" />
               </div>
               </section>
               <aside className='mt-[15%] lg:mt-0'>
-                <img src="./src/assets/foto-perfil.png" alt="foto-perfil" />
+                <img src={perfil} alt="foto-perfil" />
                 <Link to="contato" smooth={true} duration={500} offset={-60}><ButtonPerfil>Contato</ButtonPerfil></Link>
               </aside>
             </div>
@@ -147,7 +163,7 @@ function App() {
               <div className='flex lg:flex-row flex-col gap-4 mb-4 mt-8 justify-center items-center'>
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierA.png" alt="tier-a" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
+                    <img src={tierA} alt="tier-a" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
                   <div className='h-[60%] w-full flex justify-center items-center text-yellow-300'> <IoLogoJavascript className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
@@ -160,7 +176,7 @@ function App() {
 
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierB.png" alt="tier-b" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
+                    <img src={tierB} alt="tier-b" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
                   <div className='h-[60%] w-full flex justify-center items-center text-cyan-400'> <FaReact className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
@@ -173,7 +189,7 @@ function App() {
 
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierB.png" alt="tier-b" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
+                    <img src={tierB} alt="tier-b" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
                   <div className='h-[60%] w-full flex justify-center items-center text-green-600'> <FaNodeJs className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
@@ -189,7 +205,7 @@ function App() {
               <div className='flex gap-4 mb-4 justify-center lg:flex-row flex-col items-center'>
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierB.png" alt="tier-b" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
+                    <img src={tierB} alt="tier-b" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
                   <div className='h-[60%] w-full flex justify-center items-center text-cyan-500'> <RiTailwindCssFill className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
@@ -202,7 +218,7 @@ function App() {
 
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierS.png" alt="tier-s" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
+                    <img src={tierS} alt="tier-s" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
                   <div className='h-[60%] w-full flex justify-center items-center text-blue-500'> <FaCss3Alt className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
@@ -215,7 +231,7 @@ function App() {
 
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierS.png" alt="tier-s" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
+                    <img src={tierS} alt="tier-s" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
                   <div className='h-[60%] w-full flex justify-center items-center text-orange-500'> <FaHtml5 className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
@@ -237,7 +253,7 @@ function App() {
 
                 <Emblem>
                   <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierA.png" alt="tier-a" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
+                    <img src={tierA} alt="tier-a" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                     </div>
 
                     <div className='h-[60%] w-full flex justify-center items-center text-blue-400'> <VscVscode className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
@@ -250,7 +266,7 @@ function App() {
 
               <Emblem>
               <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierS.png" alt="tier-s" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
+                    <img src={tierS} alt="tier-s" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                   </div>
 
                   <div className='h-[60%] w-full flex justify-center items-center text-white'> <IoLogoFigma className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
@@ -263,7 +279,7 @@ function App() {
 
               <Emblem>
                 <div className='h-[20%] w-full flex justify-end'>
-                    <img src="./src/assets/tierA.png" alt="tier-a" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
+                    <img src={tierA} alt="tier-a" className='w-27 h-27 relative left-10 bottom-10 hover:w-28 hover:h-28'/>
                     </div>
 
                     <div className='h-[60%] w-full flex justify-center items-center text-gray-200'> <RxGithubLogo className='w-[60%] h-[60%] hover:w-[65%] hover:h-[65%]'/></div>
@@ -285,7 +301,7 @@ function App() {
               <Badge></Badge>
 
               <Badge>
-                <img src="./src/assets/badge-equipe.png" alt="badges-equipe" />
+                <img src={badgeE} alt="badges-equipe" />
                 <div className='relative bottom-[50px]'>
                   <Heading type='h5'>Trabalho em equipe</Heading>
                 </div>
@@ -295,7 +311,7 @@ function App() {
               </Badge>
 
               <Badge>
-                <img src="./src/assets/badge-pensamento.png" alt="badges-pensamento" />
+                <img src={badgeP} alt="badges-pensamento" />
                 <div className='relative bottom-[50px]'>
                   <Heading type='h5'>Pensamento crítico</Heading>
                 </div>
@@ -305,7 +321,7 @@ function App() {
               </Badge>
 
               <Badge>
-                <img src="./src/assets/badge-adpt.png" alt="badges-adpt" />
+                <img src={badgeA} alt="badges-adpt" />
                 <div className='relative bottom-[50px]'>
                   <Heading type='h5'>Adaptabilidade</Heading>
                 </div>
@@ -353,7 +369,7 @@ function App() {
                 <a href="https://github.com/joaquimpferreira/convert-money" target='blank'><ButtonSecond>Acessar projeto</ButtonSecond></a>
               </div>
         
-              <img className='hidden lg:block' src="./src/assets/screen-convertmoney.png" alt="screen-convertmoney" />
+              <img className='hidden lg:block' src={money} alt="screen-convertmoney" />
             </Card>
 
             <Card type='card2'>
@@ -378,7 +394,7 @@ function App() {
                 <a href="https://github.com/joaquimpferreira/Node-Study-Project" target='blank'><ButtonSecond>Acessar projeto</ButtonSecond></a>
               </div>
         
-              <img className='hidden lg:block' src="./src/assets/screen-nodestudy.png" alt="screen-convertmoney" />
+              <img className='hidden lg:block' src={node} alt="screen-nodestudy" />
 
             </Card>
 
@@ -404,11 +420,11 @@ function App() {
 
               </div>
         
-              <img className='hidden lg:block' src="./src/assets/screen-covarylocation.svg" alt="screen-convertmoney" />
+              <img className='hidden lg:block' src={covary} alt="screen-covarylocation"/>
             </Card>
 
             <Card type='card4'>
-              <img src="./src/assets/stars-symbol.svg" alt="stars-symbol" className='w-26 h-26'/>
+              <img src={stars} alt="stars-symbol" className='w-26 h-26'/>
                 <div className='mb-22 mt-6'>
                   <Heading type = 'h4'>SEU PROJETO VAI AQUI</Heading>
                   <Paragraph type = 'p7'>Vamos transformar sua ideia em realidade visual</Paragraph>
@@ -437,21 +453,21 @@ function App() {
                   <Input></Input>
                 </div>
 
-                <img src="./src/assets/linha.svg" alt="linha" className='mb-4 mt-4 w-full'/>
+                <img src={linha} alt="linha" className='mb-4 mt-4 w-full'/>
 
                 <div className='flex'>
                   <label className='mr-2' htmlFor="from_name"><Paragraph type = 'p8'>Nome:</Paragraph></label>
                   <Input type = 'inputname' ></Input>
                 </div>
 
-                <img src="./src/assets/linha.svg" alt="linha" className='mb-4 mt-4 w-full'/>
+                <img src={linha} alt="linha" className='mb-4 mt-4 w-full'/>
 
                 <div className='flex'>
                   <label className='mr-2' htmlFor="subject"><Paragraph type = 'p8'>Assunto:</Paragraph></label>
                   <Input type = 'inputassunto' ></Input>
                 </div>
 
-                <img src="./src/assets/linha.svg" alt="linha" className='mb-8 mt-8 w-full'/>
+                <img src={linha} alt="linha" className='mb-8 mt-8 w-full'/>
 
                 <div className='flex mb-8'>
                   <Input type = 'inputmensagem'></Input>
@@ -482,10 +498,10 @@ function App() {
         </main>
 
         <footer className='pb-19 px-10 lg:px-0'>
-          <img src="./src/assets/linha.svg" alt="linha" className='w-full mb-34'/>
+          <img src={linha} alt="linha" className='w-full mb-34'/>
           <div className='flex lg:justify-around lg:flex-row flex-col-reverse gap-12 lg:gap-0'>
             <div>
-              <img src="./src/assets/logo.svg" alt="logo" className='w-[109px] h-[75px]'/>
+              <img src={logo} alt="logo" className='w-[109px] h-[75px]'/>
               <p className="font-inter text-text-700 opacity-50 text-[14px] leading-4 font-normal mt-2">© 2025 Joaquim Pedro. All Rights Reserved.</p>
             </div>
 
