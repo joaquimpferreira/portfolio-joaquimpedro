@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
+body {
+  height: 100dvh;
+}
+
 @layer base {
     body {
-      @apply bg-bg-800;
-      height: 100dvh;
+      @apply bg-bg-800;      
     }
   }
 
