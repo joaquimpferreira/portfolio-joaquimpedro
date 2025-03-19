@@ -108,7 +108,7 @@ function App() {
 
         <main>
           
-          <article className='flex flex-col md:flex-row items-center justify-center mb-[90%] mt-[80%] lg:mb-[16%] lg:mt-[14%]' id='home'>
+          <article className='flex flex-col md:flex-row items-center justify-center mb-[40vh] mt-[40vh] lg:mb-[26vh] lg:mt-[26vh]' id='home'>
             <section className='text-center md:text-left'>
             <Heading>Transformando ideias em experiências digitais.</Heading>
             </section>
