@@ -70,9 +70,9 @@ function App() {
 
 
   return (
-    <div className='relative overflow-hidden w-full'>
-      <Spline scene="https://prod.spline.design/ZhTG6aAJofIJ5CKm/scene.splinecode" className='absolute z-1 overflow-hidden w-full !h-screen'/>
-      <div className='relative z-10'>
+    <div >
+      <Spline scene="https://prod.spline.design/ZhTG6aAJofIJ5CKm/scene.splinecode" className='absolute z-1'/>
+      <div className='relative z-2'>
         <header className='flex justify-center'>
           <Navbar>
             <section>
